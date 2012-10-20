@@ -21,8 +21,8 @@ public class AppMainExample extends Activity {
     
 	static
 	{
-		AppContext.APP_ID = "50679703d93a4b347f000017";  
-		AppContext.APP_SECRET = "493a98a5509088aa6ce6a5cf1cad9e8052f102d2e3c58cbc1502f0d531f0c608";
+		AppContext.APP_ID = "50679703d93a4b347f000016";  
+		AppContext.APP_SECRET = "493a98a5509088aa6ce6a5cf1cad9e8052f102d2e3c58cbc1502f0d531f0c607";
 		AppContext.VPSA_APP_OAUTH_CALLBACK = "http://localhost:3000/auth/vpsa/callback";
 	}
 	
