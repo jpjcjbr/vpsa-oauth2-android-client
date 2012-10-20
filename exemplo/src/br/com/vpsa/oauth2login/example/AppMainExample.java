@@ -22,8 +22,6 @@ public class AppMainExample extends Activity {
 		AppContext.VPSA_APP_OAUTH_CALLBACK = "http://notificador-pagamentos.herokuapp.com/auth/vpsa/callback";
 	}
 	
-	protected static final String TAG = "AppMainExample";
-	
 	public Context mContext;
 	public Activity mActivity;
 	public WebService webService;
