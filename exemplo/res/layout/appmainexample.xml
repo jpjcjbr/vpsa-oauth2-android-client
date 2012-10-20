@@ -36,6 +36,25 @@
 			android:text="Logar com VPSA OAuth"
 			/>
         
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Entidades"
+            android:gravity="center"
+            android:textSize="@dimen/text_size_small"
+            android:id="@+id/entidades"/>
+        <Button 
+   			android:id="@+id/chamar_entidades" 
+   			android:onClick="onClick_getEntidades"
+	        android:visibility="visible"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:adjustViewBounds="true"
+			android:gravity="center"
+			android:text="Consultar Entidades"
+			/>
+        
 </LinearLayout>
 
 </ScrollView>

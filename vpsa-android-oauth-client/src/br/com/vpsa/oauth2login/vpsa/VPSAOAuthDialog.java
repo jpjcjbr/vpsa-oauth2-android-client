@@ -23,6 +23,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import br.com.vpsa.R;
 import br.com.vpsa.oauth2login.config.AppContext;
+import br.com.vpsa.oauth2login.config.OAuthInfo;
 import br.com.vpsa.oauth2login.dialog.GenericDialogListener;
 import br.com.vpsa.oauth2login.utils.LOGGING;
 import br.com.vpsa.oauth2login.utils.Utils;
@@ -93,7 +94,7 @@ public class VPSAOAuthDialog extends Dialog {
         Drawable icon = getContext().getResources().getDrawable(
                 R.drawable.img_icon_fsqlogin_header_small);
         mTitle = new TextView(getContext());
-        mTitle.setText("VPSA OAuth");
+        mTitle.setText("VPSA Accounts");
         mTitle.setTextColor(Color.WHITE);
         mTitle.setTypeface(Typeface.DEFAULT_BOLD);
         mTitle.setBackgroundColor(BG_COLOR);
@@ -220,7 +221,7 @@ public class VPSAOAuthDialog extends Dialog {
 			if(LOGGING.DEBUG)Log.d(TAG, "onCancel()");
 	    }
 		
-		private void broadcastLoginResult(String payload) {
+		private void broadcastLoginResult(String jsonAuthInfo) {
 			
 			try {
 				
@@ -230,12 +231,13 @@ public class VPSAOAuthDialog extends Dialog {
 				if(LOGGING.DEBUG)Log.d(TAG, "sending Broadcast! " 
 						+ "|intentAction->"+intentAction
 						+ "|intentExtra->"+intentExtra
-						+ "|payload->"+payload
+						+ "|payload->"+jsonAuthInfo
 						);
 				
 				Intent mIntent = new Intent();
 	        	mIntent.setAction(intentAction);
-	        	mIntent.putExtra(intentExtra, payload);
+	        	
+	        	mIntent.putExtra(intentExtra, new OAuthInfo(jsonAuthInfo).getBundle());
 	        	
 	        	context.sendBroadcast(mIntent);
 			}
