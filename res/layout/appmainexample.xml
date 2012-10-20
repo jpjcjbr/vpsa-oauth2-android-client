@@ -17,25 +17,6 @@
 	android:layout_gravity="center_horizontal"
     android:orientation="vertical"
     >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Facebook OAuth2 Login"
-            android:gravity="center"
-            android:textSize="@dimen/text_size_small"/>
-        <ImageButton 
-   			android:id="@+id/img_facebookLogin" 
-   			android:onClick="onClick_facebookLogin"
-	        android:visibility="visible"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-			android:src="@drawable/generic_icon_facebooklogin"
-	        android:adjustViewBounds="true"
-	        android:layout_marginLeft="@dimen/margin_size_large"
-	        android:layout_marginRight="@dimen/margin_size_large"
-			android:background="@null"
-			android:gravity="center"
-			/>
         
         <TextView
             android:layout_width="wrap_content"
@@ -44,18 +25,15 @@
             android:gravity="center"
             android:textSize="@dimen/text_size_small"
             android:id="@+id/texto"/>
-        <ImageButton 
+        <Button 
    			android:id="@+id/img_facebookLogin" 
    			android:onClick="onClick_vpsaLogin"
 	        android:visibility="visible"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-			android:src="@drawable/generic_icon_facebooklogin"
 	        android:adjustViewBounds="true"
-	        android:layout_marginLeft="@dimen/margin_size_large"
-	        android:layout_marginRight="@dimen/margin_size_large"
-			android:background="@null"
 			android:gravity="center"
+			android:text="Logar com VPSA OAuth"
 			/>
         
 </LinearLayout>
